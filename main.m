@@ -236,7 +236,7 @@ end
 [t_mf,x_mf]= mean_field_dynamics(dwell_time, x_0_mf, t_N, a_rand, mf_1,mf_2, J_1, J_2);
 
 
-%%
+%% Plot 1: System trajectories
 p(1) = plot(t_col,x_iso(:,1));
 hold on 
  plot(t_col,x_col1(:,2:30));
@@ -282,6 +282,13 @@ grid on
 ylim([-50 50])
 
 
+%% Plot 2: x1-component vs x2-component
 
-
+figure
+plot(x_col1(100:end,2:end), x_col2(100:end,2:end));
+hold on 
+plot (x_em(100:end,1), x_em(100:end,2), LineStyle="--")
+xlabel("x1-component")
+ylabel("x2-component")
+grid on
 

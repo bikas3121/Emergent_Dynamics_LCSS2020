@@ -1,4 +1,15 @@
 function [t_em,x_em]= emergent_dynamics(dwell_time, x_0_avg, t_N, a_rand, A_0_1, A_0_2)
+% This function solves the emergent dynamics, i.e. the reduced order slow
+% dynamics obtained after the time-scale separation
+% INPUTS:
+  % dwell_time, 
+  % x_0_avg -  initial value to the mean-field dynamics obtained after the
+  % transfromation
+  % t_N -  Simulation time
+  % a_rand - switching mode
+  % A_0_1 and A_0_2 -  Closed loop network dynamics due to Graph G1 and G2,
+  % respectively
+ 
 x_em =[];
 t_em= [];
  t_span = [0 dwell_time];
